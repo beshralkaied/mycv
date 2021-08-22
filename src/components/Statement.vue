@@ -1,6 +1,8 @@
 <template>
+<div class="p">
 <h2>{{ tilte }}</h2>
 <p>{{ discreption }}</p>
+    </div>
 </template>
 
 <script lang="ts">
@@ -18,3 +20,8 @@ export default defineComponent({
   },
 });
 </script>
+
+<style  scoped>
+@import url("../assets/style.css");
+</style>
+

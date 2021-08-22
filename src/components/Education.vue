@@ -1,9 +1,16 @@
 <template>
+<div class="p">
   <h2>{{ tilte }}</h2>
   <ul>
-  <li><strong>{{ discreption1 }}</strong>{{ discreption2 }}</li>
-  <li><strong>{{ discreption3 }}</strong></li>
+    <li>
+      <strong>{{ discreption1 }}</strong
+      >{{ discreption2 }}
+    </li>
+    <li>
+      <strong>{{ discreption3 }}</strong>
+    </li>
   </ul>
+</div>
 </template>
 
 <script lang="ts">
@@ -20,3 +27,7 @@ export default defineComponent({
   },
 });
 </script>
+
+<style  scoped>
+@import url("../assets/style.css");
+</style>

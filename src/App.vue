@@ -1,12 +1,12 @@
 <template>
+
   <Header></Header>
   <Statement></Statement>
   <Synopsis></Synopsis>
   <Skills></Skills>
   <Education></Education>
   <Information></Information>
-  
-  
+
 </template>
 
 <script lang="ts">
@@ -17,6 +17,7 @@ import Statement from "./components/Statement.vue"
 import Synopsis from "./components/Synopsis.vue"
 import Education from "./components/Education.vue"
 import Information from "./components/Information.vue"
+
 
 export default defineComponent({
   components: {
@@ -41,7 +42,9 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+ 
 }
 
+
 </style>
+

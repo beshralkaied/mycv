@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+.menu {
+    margin-top: 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    padding: 0px 0px 0px 389px;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #04AA6D;
+}
+
+.p {
+    text-align: left;
+    padding: 0 260px 0 260px;
+}
+
+.skill {
+    display: inline-grid;
+}
