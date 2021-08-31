@@ -1,14 +1,15 @@
 <template>
   <div class="main" style="margin: 0">
-    <div class="logo">
+    <div class="logo col-5">
       <img src="@/assets/imge.png" />
       <h2>My Cv</h2>
     </div>
-    <div class="link menu">
-      <ul>
-        <li><a href="">Home</a></li>
+    <div class="menu col-7" >
+      
+      <ul :class="{ sale: theme === 'sale' }">
+        <li><router-link to="/">Home</router-link></li>
         <li><a href="">Skills</a></li>
-        <li><a href="">About</a></li>
+        <li><router-link to="/about">About</router-link></li>
       </ul>
     </div>
   </div>
@@ -17,11 +18,22 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-// import imagelogo from '../assets/image.png';
-
+import axios from "axios";
+let color = "";
 export default defineComponent({
-  props: {},
-  setup() {},
+  props: ['theme'],
+
+ 
+
+  setup() {
+    // function ChangeColor() {
+    //   if (axios.post("URL") == axios.post("http://localhost:8080/")) {
+    //    return color = "red";
+    //   } else {
+    //    return color = "blue";
+    //   }
+    // }
+  },
 });
 </script>
 
@@ -31,14 +43,12 @@ export default defineComponent({
 @import url("../assets/style.css");
 
 .main {
-  border-bottom: 1px solid;
   display: flex;
-  justify-content: space-between;
   margin: 0;
 }
 .logo {
   display: flex;
-  background-color: #333;
+  background-color: #292d33;
   padding: 10px 0px 0px 10px;
 }
 .logo h2 {
@@ -46,10 +56,10 @@ export default defineComponent({
   color: white;
   width: max-content;
 }
-.link {
-  width: 100%;
+
+.sale{
+  background-color: brown;
+  color: black;
 }
-.link a {
-  margin-left: 20px;
-}
+
 </style>

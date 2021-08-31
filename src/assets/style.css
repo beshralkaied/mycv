@@ -4,6 +4,7 @@ body {
 
 .menu {
     margin-top: 0;
+    width: 1349px;
 }
 
 .menu ul {
@@ -11,8 +12,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    padding: 0px 0px 0px 389px;
+    /* background-color: #292d33; */
 }
 
 .menu li {
@@ -28,7 +28,19 @@ body {
 }
 
 .menu li a:hover {
-    background-color: #04AA6D;
+    background-color: #ea6309;
+}
+
+.maindiv {
+    font-size: 3.75rem;
+    font-weight: 700;
+    margin: 60px auto 0;
+    color: #ea6309;
+}
+
+.mainp {
+    font-size: 1.25rem;
+    margin: 9px auto 0;
 }
 
 .p {
@@ -37,5 +49,6 @@ body {
 }
 
 .skill {
-    display: inline-grid;
+    display: inline-flex;
+    height: 500px;
 }

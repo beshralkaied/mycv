@@ -29,5 +29,5 @@ export default defineComponent({
 </script>
 
 <style  scoped>
-@import url("../assets/style.css");
+/* @import url("../assets/style.css"); */
 </style>
