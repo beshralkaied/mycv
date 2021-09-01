@@ -58,7 +58,7 @@ export default defineComponent({
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: inherit;
+    color: #292d33;
 }
 .main h5{
     margin-bottom: 0%;
