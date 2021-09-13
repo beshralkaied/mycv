@@ -1,5 +1,5 @@
 <template>
-  <div class="mainhome">
+  <div class="mainhome m-4">
     <div class="container cediv">
       <div class="mainimg"></div>
       <h5>{{ title }}</h5>
@@ -34,10 +34,7 @@ export default defineComponent({
       type: String,
       required: true,
     },
-    image: {
-      type: String,
-      required: true,
-    },
+ 
   },
 
   setup() {
@@ -63,23 +60,17 @@ export default defineComponent({
   background-color: #ffffff;
   color: #111111;
   text-align: center;
-  position: relative;
   line-height: 1.6;
   font-size: 1rem;
   width: 303px;
   height: 453px;
   border-radius: 15px;
-  display: block;
   margin-top: 21px;
   margin-bottom: 20px;
-  margin-left: auto;
 }
 .cediv {
-  position: relative;
-  flex: 1;
   max-width: 100%;
   padding: 0 30px 32px;
-  display: block;
 }
 .mainimg {
   background-image: url("../assets/004-sustainability-1.png");

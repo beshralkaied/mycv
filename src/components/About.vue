@@ -1,9 +1,10 @@
 <template>
-
   <Header></Header>
-  <div class="container hh">
-  <div class="col-6"><Aboutme></Aboutme></div>
-  <div class="col-6"><Photoo></Photoo></div>
+  <div class=" container  ">
+    <div class="row ">
+    <div class="pt-5 col-md-6 col-sm-12"><Aboutme></Aboutme></div>
+    <div class="pt-5 col-md-6 col-sm-12"><Photoo></Photoo></div>
+    </div>
   </div>
 </template>
 
@@ -24,9 +25,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.hh{
-  margin-top: 50px;
-  display: flex;
-}
+
+
 </style>
 

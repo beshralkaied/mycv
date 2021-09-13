@@ -1,6 +1,6 @@
 <template>
-  <div class="container all">
-    <div class="suball">
+  <div class="container ">
+    <div class="d-flex flex-wrap justify-content-center">
       
 
       <HomeCard

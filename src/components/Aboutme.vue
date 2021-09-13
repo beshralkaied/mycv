@@ -1,17 +1,19 @@
 <template>
-  <div class="container main">
+  <div class="container">
+    <div class="main text-start mt-5 p-0 ">
     <h2>{{ title }}</h2>
-    <h4>EMAIL</h4>
-    <h5>
+    <h4 class="mt-4">EMAIL</h4>
+    <h5 class="mt-4">
       <a  href="mailto:beshr.alkaied@gmail.com">{{ email }}</a>
     </h5>
-    <h4>ROLE</h4>
-    <h5>{{ role }}</h5>
-    <h4>PHONE</h4>
-    <h5 class="b">
+    <h4 class="mt-4">ROLE</h4>
+    <h5 class="mt-4">{{ role }}</h5>
+    <h4 class="mt-4">PHONE</h4>
+    <h5 class="b mt-4">
       <a href="tel:(+962)79-292-3491">{{ phone }}</a>
     </h5>
     <Download></Download>
+  </div>
   </div>
 </template>
 
@@ -36,34 +38,26 @@ export default defineComponent({
 
 <style scoped>
 .main {
-  text-align: left;
+  
   font-family: Arial, Helvetica, sans-serif;
   line-height: 88px;
   font-weight: 400;
-  padding: 30px 30px;
   width: 396px;
-  height: 563px;
+  height: auto;
  
 }
 .main h2 {
   color: #ea6309;
   font-size: 70px;
-  margin-bottom: 0%;
-  width: fit-content;
 }
 .main h4{
-    margin-bottom: 0%;
-    width: fit-content;
-    margin: 30px 0 0 0;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 2px;
     color: #292d33;
 }
 .main h5{
-    margin-bottom: 0%;
      width: fit-content;
-     margin: 30px 0 0 0;
      color: #ea6309;
      
 }

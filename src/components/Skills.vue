@@ -76,7 +76,6 @@ export default defineComponent({
     }
 
     const skillsArray = ["html", "java"];
-    console.log(rand());
     const k = [
       {
         position: getposition(100, 38),

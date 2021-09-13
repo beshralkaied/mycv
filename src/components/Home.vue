@@ -1,14 +1,15 @@
 <template>
   <div class="firstdiv">
     <Header :theme="'sale'" />
-
-    <div class="maindiv">Development Services</div>
-    <div class="mainp">
+    <div class="">
+    <div class="maindiv mt-5 mx-auto">Development Services</div>
+    <div class="mainp mt-2 mb-3 mx-auto">
       Sample text. Click to select the text box. Click again or double click to
       start editing the text.
     </div>
 
     <HomeCards></HomeCards>
+    </div>
     <Statement></Statement>
     <Synopsis></Synopsis>
     <Skills></Skills>
@@ -47,13 +48,11 @@ export default defineComponent({
 .maindiv {
   font-size: 3.75rem;
   font-weight: 700;
-  margin: 60px auto 0;
   color: #ea6309;
 }
 
 .mainp {
   font-size: 1.25rem;
-  margin: 9px auto 0;
 }
 .firstdiv {
   height: 100vh;
