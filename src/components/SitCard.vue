@@ -1,4 +1,10 @@
 <template>
+<transition
+appear
+@before-enter="beforeEnter"
+@enter="enter"
+
+>
   <div class="container first col-md-4 col-sm-6 col-lg-3  ">
     <div class="padding">
       <div class="d-flex justify-content-center margin">
@@ -14,11 +20,12 @@
       </div>
     </div>
   </div>
+</transition>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-
+import gsap from "gsap"
 export default defineComponent({
   props: {
     title: {
@@ -34,7 +41,27 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {},
+  setup() {
+    function beforeEnter(el:any) {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(100px)'
+    }
+    
+    function enter(el:any, done:any) {
+       gsap.to(el, {
+         opacity: 1,
+         y: 0,
+         duration: 0.8,
+         onComplete: done,
+         delay: 0.2,
+
+       })
+    }
+ return {
+   beforeEnter,
+   enter
+ }
+ },
 });
 </script>
 

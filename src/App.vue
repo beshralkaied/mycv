@@ -1,5 +1,6 @@
 <template>
   <router-view />
+  
 </template>
 
 <script lang="ts">
@@ -15,7 +16,7 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #ffffff;
+  
 
 }
 </style>

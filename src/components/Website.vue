@@ -1,23 +1,23 @@
 <template>
-<div class="websit-componant">
-  <div class="bg">
-    <div class="shadow">
-      <ScrollHeader />
-      <Section />
+  <div class="websit-componant">
+    <div class="bg">
+      <div class="shadowbox">
+        <ScrollHeader />
+        <Section />
+      </div>
+    </div>
+    <div class="bgall">
+      <SitCards />
+      <WebSitSlider />
+      <ButtonSection />
+      <FixedSection />
+      <SecendSitCards />
+      <HoverSitCards />
+      <LastSection />
     </div>
   </div>
-  <div class="bgall">
-    <SitCards />
-    <ButtonSection />
-    <FixedSection />
-    <SecendSitCards />
-    <HoverSitCards />
-    <LastSection/>
-  </div>
-</div>
-  
-    <div class="fdiv footer "><Footer /></div>
-  
+
+  <div class="fdiv footer"><Footer /></div>
 </template>
 
 <script lang="ts">
@@ -32,6 +32,8 @@ import SecendSitCards from "@/components/SecendSitCards.vue";
 import HoverSitCards from "@/components/HoverSitCards.vue";
 import Footer from "@/components/Footer.vue";
 import LastSection from "@/components/LastSection.vue";
+import WebSitSlider from "@/components/WebSitSlider.vue";
+
 export default defineComponent({
   components: {
     ScrollHeader,
@@ -44,6 +46,8 @@ export default defineComponent({
     HoverSitCards,
     Footer,
     LastSection,
+    WebSitSlider,
+   
   },
   setup() {},
 });
@@ -60,7 +64,7 @@ export default defineComponent({
   background-repeat: no-repeat;
   background-size: cover;
 }
-.shadow {
+.shadowbox {
   background: linear-gradient(
     180deg,
     #0bccee 0%,
@@ -84,14 +88,13 @@ export default defineComponent({
   height: 411px;
 }
 
-@media (min-width: 992px) { 
-  .footer{
+@media (min-width: 992px) {
+  .footer {
     position: fixed;
     bottom: 0;
   }
-  .websit-componant{
-  
-  margin-bottom: 411px;
+  .websit-componant {
+    margin-bottom: 411px;
+  }
 }
- }
 </style>

@@ -55,6 +55,105 @@
             to="/about"
             >About</router-link
           >
+          <!-- dropend -->
+          <div class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Forms
+            </a>
+            <ul
+              class="dropdown-menu form-bg"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <router-link
+                  class="nav-link"
+                  :class="{ active: currentPage === 'Form' }"
+                  to="/form"
+                  >View Forms</router-link
+                >
+              </li>
+              <li>
+                <div class="truedisplay">
+                  <router-link
+                    class="nav-link"
+                    :class="{ active: currentPage === 'PersonalPage' }"
+                    to="/personalPage"
+                    >PersonalPage</router-link
+                  >
+                  <div class="d">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <router-link
+                          class="nav-link"
+                          :class="{ active: currentPage === 'Add' }"
+                          to="/personalPage/add"
+                          >Add</router-link
+                        >
+                      </li>
+                      <li class="nav-item">
+                        
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="truedisplay">
+                  <router-link
+                    class="nav-link"
+                    :class="{ active: currentPage === 'FamilyPage' }"
+                    to="/familyPage"
+                    >FamilyPage</router-link
+                  >
+                  <div class="d">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <router-link
+                          class="nav-link"
+                          :class="{ active: currentPage === 'FamilyAdd' }"
+                          to="/familyPage/familyAdd"
+                          >FamilyAdd</router-link
+                        >
+                      </li>
+                   
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="truedisplay">
+                  <router-link
+                    class="nav-link"
+                    :class="{ active: currentPage === 'WorkPage' }"
+                    to="/workPage"
+                    >WorkPage</router-link
+                  >
+                  <div class="d">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <router-link
+                          class="nav-link"
+                          :class="{ active: currentPage === 'WorkAdd' }"
+                          to="/workPage/workAdd"
+                          >WorkAdd</router-link
+                        >
+                      </li>
+                    
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -72,7 +171,7 @@ export default defineComponent({
   setup() {
     let router = useRouter();
     let currentPage = router.currentRoute.value.name;
-  
+
     return { currentPage };
   },
 });
@@ -81,7 +180,6 @@ export default defineComponent({
 
 
 <style scoped>
-
 .logo {
   display: flex;
   background-color: #292d33;
@@ -132,5 +230,17 @@ export default defineComponent({
 }
 .main.LeightHeader a {
   color: #292d33;
+}
+.form-bg {
+  background-color: #292d33;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.d {
+  display: none;
+}
+.truedisplay:hover .d {
+  display: block;
 }
 </style>
