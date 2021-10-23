@@ -1,7 +1,7 @@
 <template>
   <Header />
   <Popups />
-  <PersonalModal @onFormSelected="formSelected" />
+  <PersonalModal @onFormSelected="formSelected" :stop="stop"/>
   <div class="container-fluid bgbody pb-5 px-5">
     <div class="container form-main">
       <p>
@@ -85,20 +85,27 @@ export default defineComponent({
 
   setup() {
     const parsonalStoreService = ParsonalStoreService();
-
+    let stop = ref(false)
+    
     let forms = ref<any[]>([]);
     function formSelected(formsIds: number[]) {
       forms.value = []
       for (let index = 0; index < formsIds.length; index++) {
+        if(forms.value.length < 2){
+          stop.value = false
         const formid = formsIds[index];
         const form = parsonalStoreService.getById(formid);
         forms.value.push(form)
+      }else{
+        stop.value = true
+      }
       }
     }
 
     return {
       formSelected,
       forms,
+      stop,
     };
   },
 });

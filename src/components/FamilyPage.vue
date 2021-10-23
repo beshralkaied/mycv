@@ -51,7 +51,7 @@ export default defineComponent({
 
     function deleteall(i:number) {
       familyStoreService.del(i)
-      console.log(data.value)
+      
     }
 
 

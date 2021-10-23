@@ -30,7 +30,8 @@
         </div>
         <div class="modal-body">
           <div v-for="(names, index) in data" :key="index">
-            <input type="checkbox" name="index" @click="isChecked(index), $event" />
+            {{stop}}
+            <input type="checkbox" name="index" @click="isChecked(index)" :disabled="stop && !parsonal.includes(index) "/>
             {{ names.name }}
           </div>
           <div class="modal-footer">
@@ -59,7 +60,10 @@ export default defineComponent({
     onFormSelected: (formsIds: Array<any>) => formsIds.length > 0,
   },
 
+ 
+
   setup(props, context) {
+    let stop = ref(false)
     const parsonalStoreService = ParsonalStoreService();
     let data = parsonalStoreService.get();
     let parsonal = ref<number[]>([]);
@@ -67,8 +71,7 @@ export default defineComponent({
     let name = ref("");
     let city = ref("");
     let job = ref("");
-
-    function isChecked(i: number, event:any) {
+    function isChecked(i: number) {
 
       let tempIndex = parsonal.value.findIndex((x) => x == i);
       if (tempIndex > -1) {
@@ -76,10 +79,16 @@ export default defineComponent({
       } else {
         parsonal.value.push(i);
       }
+      isDisabled()
     }
 
     function save() {
       context.emit("onFormSelected", parsonal.value);
+    }
+
+    function isDisabled() {
+      stop.value = parsonal.value.length >= 2
+     
     }
 
     return {
@@ -87,6 +96,8 @@ export default defineComponent({
       parsonal,
       isChecked,
       save,
+      stop,
+      
     };
   },
 });

@@ -154,6 +154,12 @@
               </li>
             </ul>
           </div>
+          <router-link
+            class="nav-link"
+            :class="{ active: currentPage === 'TodoTestPage' }"
+            to="/todoTestPage"
+            >TodoTestPage</router-link
+          >
         </div>
       </div>
     </div>

@@ -3,7 +3,6 @@ export let familyFormData : any[] =[]
 
 export default function (){
     function get(){
-        console.log(familyFormData)
         return familyFormData
 
     }

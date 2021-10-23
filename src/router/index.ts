@@ -4,11 +4,10 @@ import About from "../components/About.vue";
 import Home from "../components/Home.vue";
 import Website from "../components/Website.vue"
 import Form from "../components/Form.vue"
+import TodoTestPage from "../components/TodoTestPage.vue"
 import { WorkPageroutes } from "./WorkPageRoutes"
 import { FamilyPageroutes } from "./FamilyPageRoutes"
 import { ParsonalPageroutes } from "./PersonalPageRoutes"
-
-import Edit from "../components/Edit.vue"
 
 const routes = [
     {
@@ -35,6 +34,11 @@ const routes = [
         component: Form,
     },
 
+    {
+        path: "/todoTestPage",
+        name: "TodoTestPage",
+        component: TodoTestPage,
+    },
    
     ...ParsonalPageroutes,
     ...WorkPageroutes,

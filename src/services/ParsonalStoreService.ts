@@ -1,6 +1,5 @@
 export let parsonalFormData : any[] =[]
 export let finish: any[] = []
-    console.log(finish)
 export default function (){
     function get(){
         return parsonalFormData

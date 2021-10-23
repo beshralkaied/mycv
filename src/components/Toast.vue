@@ -55,7 +55,7 @@ export default defineComponent({
     }
     
     watch(() => props.content,
-    () => {addTodo(); console.log(123)}
+    () => {addTodo();}
     )
     return {
       todos,
